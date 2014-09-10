@@ -2,6 +2,8 @@ Ubersicht CoCo Now Playing widget
 =================================
 
 Using Ubersicht displays current track playing at CoCoMpls Downtown on your desktop.
+[Ubersicht](http://tracesof.net/uebersicht/) is a GeekTool type of utility for Mac OS X that
+let's you run system commands and display their output on your desktop.
 
 ## to use
 Drop this entire repo into your Ubersicht widgets folder.
