@@ -18,9 +18,9 @@ update: (outputSong, domEl) ->
 
   html = ""
 
-  track = data.recenttracks.track[0]
+  try
+    track = data.recenttracks.track[0]
 
-  if track isnt undefined
     theArtist = track.artist
     theArtistName = theArtist.name
     theTrack = track.name
@@ -28,7 +28,8 @@ update: (outputSong, domEl) ->
     html += "<div class='artist'>" + theArtistName + "</div>"
     html += "<div class='title'>" + theTrack + "</div> "
     html += "</div>"
-  else
+
+  catch e
     html += "<div class='text'>...waiting</div>"
 
   $('#cocoTunes').html(html)
