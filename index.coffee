@@ -5,7 +5,7 @@ command: "curl -sS 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttrack
 
 
 # set the refresh frequency (in milliseconds)
-refreshFrequency: 2000
+refreshFrequency: 10000
 
 # make the output
 render: (outputSong) -> """
