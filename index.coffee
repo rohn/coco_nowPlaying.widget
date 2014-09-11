@@ -1,7 +1,7 @@
 apiKey = 'your api key'   # put your last.fm api key here
 
 # get the last(latest) playing track
-command: "curl -sS 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=CoCoDT&api_key=#{apiKey}&limit=1&extended=1&format=json'"
+command: "curl -sS 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=CoCoDT&api_key=#{apiKey}&limit=2&extended=1&format=json'"
 
 
 # set the refresh frequency (in milliseconds)
@@ -29,8 +29,14 @@ update: (outputSong, domEl) ->
     html += "<div class='title'>" + theTrack + "</div> "
     html += "</div>"
 
+    currentTimestamp =(new Date).getTime()
+    playedTimestamp = track.date.uts
+    elapsedSeconds = currentTimestamp - playedTimestamp
+    if elapsedSeconds > 900
+      html = "<div class='text'><div class='artist'>Nothing </div><div class='title'>Playing</div></div>"
+
   catch e
-    html += "<div class='text'>...waiting</div>"
+    html += "<div class='text'>...retrying</div>"
 
   $('#cocoTunes').html(html)
 
