@@ -6,11 +6,11 @@ Using Ubersicht displays current track playing at CoCoMpls Downtown on your desk
 let's you run system commands and display their output on your desktop.
 
 ## to use
-Drop this entire repo into your Ubersicht widgets folder.
+Drop the `coco_nowPlaying.widget` folder into your Ubersicht widgets folder.
 
 ### setup
-You'll need to have a last.fm api key, which you can acquire from http://www.last.fm/api
-Plug that key into the first line of the index.coffee file and then you should be ready to go
+You'll need to have a **last.fm api key**, which you can acquire from http://www.last.fm/api
+Plug that key into the first line of the `index.coffee` file and then you should be ready to go.
 
 ## more info
 I took inspiration from http://beautifulblood.deviantart.com/art/Unnamed-255040591
