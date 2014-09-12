@@ -46,9 +46,10 @@ style: """
   color: #fff
   margin: 0
   background: transparent;
+  -webkit-font-smoothing: antialiased;
 
   #cocoTunes
-    background-image: url(coco_nowPlaying.widget/img/left.png)
+    background-image: url(coco_nowPlaying.widget/img/left.svg)
     background-position: left
     background-repeat: no-repeat
     height: 20px
@@ -61,9 +62,12 @@ style: """
     display: block
     line-height: 26px
     color: #fff
-    font-family: 'Myriad Pro'
+    font-family: 'Seravek', 'Myriad Pro'
+    font-weight: 400
     font-size: 12px
     background-color: #000
+    padding-right: 7px
+    margin-left: -7px
 
   .title
     font-weight: bold
@@ -86,4 +90,10 @@ style: """
     overflow: hidden
     white-space: nowrap
     text-overflow: ellipsis
+
+  .artist::before
+    color: #fff
+    font-weight: bold
+    margin: 0 6px
+    content: "♫"
 """
